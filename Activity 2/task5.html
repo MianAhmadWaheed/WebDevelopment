@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            input[type=text],input[type=password],input[type=email] {
+          height: 20px;
+          width: 300px;
+}
+
+input[type=submit] {
+  background-color:red;
+  border: none;
+  color: white;
+  padding: 8px 8px;
+  width: 310px;
+}
+   div {
+   padding-top: 100px;
+position: absolute;
+animation-name: animate;
+animation-duration: 5sec;
+}
+@keyframes animate
+{
+    10% {left:70%;top:0%}
+    20% {left:80%;top:0%}
+    30% {left:90%;top:0%}
+    40% {left:150%;top:0%}
+    50% {left:200%;top:0%}
+    60% {left:100%;top:0%}
+    70% {left:100%;top:0%}
+    80% {left:100%;top:0%}
+    90% {left:100%;top:0%}
+    100% {left:100%;top:0%}
+
+}
+    </style>
+</head>
+<body style="background-color:rgb(31, 123, 180)">
+    <div>
+        <input type="text" id="fname" name="fname" placeholder="Name*"><br><br>
+        <input type="text" id="lname" name="lname" placeholder="Username*"><br><br>
+        <input type="password" id="paswd" name="paswd" placeholder="Username*"><br><br>
+        <input type="text" id="numberr" name="numberr" placeholder="Number*"><br><br>
+        <input type="email" id="maile" name="maile" placeholder="Email*"><br><br>
+        <input type="submit" value="Register">
+    </div>
+</body>
+</html>
