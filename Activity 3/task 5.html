@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+    <style>
+        #result {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        function printMultiplicationTable() {
+            var number = parseInt(prompt("Enter Table number:"));
+            var resultElement = document.getElementById('result');
+            if (!isNaN(number)) {
+                var table = '<h4>Multiplication Table for ' + number + '</h4><ul>';
+                for (var i = 1; i <= 10; i++) {
+                    table += '<li>' + number + ' x ' + i + ' = ' + (number * i) + '</li>';
+                }
+                table += '</ul>';
+                resultElement.innerHTML = table;
+            } else {
+                resultElement.textContent = 'Invalid input.';
+            }
+        }
+    </script>
+    <button onclick="printMultiplicationTable()">Enter Number</button>
+    <div id="result"></div>
+
+</body>
+
+</html>
