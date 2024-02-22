@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Nav Bar</title>
+    <link rel="stylesheet" type="text/css" href="signup.css">
+</head>
+
+<body>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="signup">
+            <form onsubmit="return validateSignUpForm()">
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input type="text" name="username" id="username" placeholder="User name" required>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input type="password" name="pswd" id="password" placeholder="Password" required>
+                <!-- <input type="date" name="birthdate" id="birthdate" placeholder="DOB" required> -->
+                <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+                <input type="text" name="zip" id="zip" placeholder="Zip Code" required>
+                <!-- <input type="text" name="country" id="country" placeholder="Country" required> -->
+                <button type="submit">Sign up</button>
+            </form>
+        </div>
+
+        <div class="login">
+            <form onsubmit="return validateLoginForm()">
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="email" name="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" name="pswd" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validateSignUpForm() {
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var birthdate = document.getElementById('birthdate').value;
+            var gender = document.getElementById('gender').value;
+            var phone = document.getElementById('phone').value;
+            var zip = document.getElementById('zip').value;
+            var country = document.getElementById('country').value;
+            if (username.trim() === '' || email.trim() === '' || password.trim() === '' ||
+                birthdate.trim() === '' || gender.trim() === '' || phone.trim() === '' ||
+                zip.trim() === '' || country.trim() === '') {
+                alert('Please fill in all required fields');
+                return false;
+            }
+            if (!/^[a-zA-Z0-9_-]{3,16}$/.test(username)) {
+                alert('Invalid username format');
+                return false;
+            }
+            if (!isValidEmail(email)) {
+                alert('Please enter a valid email address');
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters long');
+                return false;
+            }
+            return true;
+        }
+
+        function validateLoginForm() {
+            var loginEmail = document.getElementById('loginEmail').value;
+            var loginPassword = document.getElementById('loginPassword').value;
+            return true;
+        }
+        function isValidEmail(email) {
+            var emailRegex = /^\S+@\S+\.\S+$/;
+            return emailRegex.test(email);
+        }
+    </script>
+
+</body>
+
+</html>
