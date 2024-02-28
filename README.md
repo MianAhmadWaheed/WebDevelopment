@@ -58,13 +58,32 @@
 
 
 --> Activity 3
+
+
 -> Task 1
+
+<img width="370" alt="t1" src="https://github.com/MianAhmadWaheed/WebDevelopment/assets/158217746/d5d0d1a7-30ce-4e87-b651-0203c49324f4">
+
 
 -> Task 2
 
+<img width="733" alt="t2" src="https://github.com/MianAhmadWaheed/WebDevelopment/assets/158217746/3425deab-a3d8-402e-b21c-b0db058010a1">
+
+
 -> Task 3
 
+<img width="697" alt="t3" src="https://github.com/MianAhmadWaheed/WebDevelopment/assets/158217746/fc8c5514-98c5-4aaf-ab43-f5658db0c585">
+
+
 -> Task 4
+
+<img width="328" alt="t4" src="https://github.com/MianAhmadWaheed/WebDevelopment/assets/158217746/fd81ff00-75ea-47de-b5aa-dd14d3668a42">
+
+->Task 5
+
+<img width="656" alt="t5" src="https://github.com/MianAhmadWaheed/WebDevelopment/assets/158217746/d339b615-fa1d-4538-aa50-f753576008ad">
+
+
 
 
 --> Activity 4
