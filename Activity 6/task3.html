@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Download </title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        #image-container {
+            display: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="image-container">
+        <img src="1.png" alt="image">
+    </div>
+    <button id="toggle-button">Show Image</button>
+    <script>
+        $(document).ready(function () {
+            $('#toggle-button').click(function () {
+                $('#image-container').toggle();
+                var buttonText = $(this).text();
+                $(this).text(buttonText === "Show Image" ? "Hide Image" : "Show Image");
+            });
+        });
+    </script>
+</body>
+
+</html>

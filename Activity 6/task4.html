@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Row from Table with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        tr:nth-child{
+            background-color: #a87d7d;
+        }
+
+        th {
+            background-color: white;
+            color: rgb(176, 45, 45);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Remove any row of table using jquery</h2>
+    <table id="myTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>RollNo</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Haji</td>
+                <td>21F-0000</td>
+                <td><button class="delete-btn">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Raja</td>
+                <td>21F-1111</td>
+                <td><button class="delete-btn">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Pola</td>
+                <td>21F-2222</td>
+                <td><button class="delete-btn">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        $(document).ready(function () {
+            $('.delete-btn').click(function () {
+                confirm("You want to delete the row")
+                $(this).closest('tr').remove();
+            });
+        });
+    </script>
+</body>
+
+</html>
