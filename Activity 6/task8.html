@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+    <style>
+        #animatedDiv {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(28, 165, 66);
+            position: absolute;
+            left: 0;
+        }
+        #startAnimation{
+        
+
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script>
+    <script>
+        $(document).ready(function () {
+            var animation;
+            $("#startAnimation").click(function () {
+                animation = $("#animatedDiv").animate({
+                    left: "100%",
+                }, 8000);
+            });
+            $("#stopAnimation").click(function () {
+                if (animation !== undefined) {
+                    animation.stop();
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="animatedDiv"></div>
+    <br><br><br><br><br><br>
+    <button id="startAnimation">Start Animation</button>
+    <button id="stopAnimation">Stop Animation</button>
+</body>
+
+</html>
